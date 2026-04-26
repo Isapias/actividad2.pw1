@@ -1,0 +1,123 @@
+body{
+    width: 100%;
+    height: 100%;
+    font-size: 300%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+}
+
+.contenedor{
+    height: 45rem;
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    grid-template-rows:  repeat(6, auto);
+    grid-template-areas:
+    "uno uno dos dos cuatro cuatro"
+    "uno uno dos dos cuatro cuatro"
+    "uno uno tres tres cuatro cuatro"
+    "uno uno tres tres cuatro cuatro"
+    "cinco cinco cinco seis seis seis"
+    "cinco cinco cinco seis seis seis";
+    
+    
+}
+
+.div{
+    border-style: solid;
+    border-color: rgb(31, 28, 28);
+    border-width: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one, .four{
+    background-color: rgb(175, 235, 175);
+}
+
+.two, .three{
+    background-color: rgb(245, 245, 139);
+}
+
+.five{
+    background-color: rgb(235, 167, 167);
+    grid-area: cinco;
+   
+}
+
+.six{
+    background-color: rgb(192, 192, 243);
+    grid-area: seis;
+}
+.one{
+    grid-area: uno;
+    
+}
+
+.two{
+    grid-area: dos;
+}
+
+.three{
+    grid-area: tres;
+    
+}
+
+.four{
+    grid-area: cuatro;
+
+}
+
+@media screen and (max-width: 48em){
+      
+    body{
+        font-size: 150%;
+    }
+
+        .contenedor{
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(6,16.66%);
+        grid-template-areas: none;
+    }
+
+    .one, .two, .three, .four, .five, .six{
+        grid-area: auto;
+    }
+
+    .five{
+        background-color: rgb(192, 192, 243);
+    }
+
+    .six{
+        background-color: rgb(235, 167, 167);
+    }
+   
+}
+
+@media screen and (min-width: 49em) and (max-width: 64em) {
+
+    body{
+        font-size: 200%;
+    }
+
+    .contenedor{
+        grid-template-columns: 70% 30%;
+        grid-template-rows: repeat(3, 33.33%);
+        grid-template-areas: none;
+    }
+    
+    .one, .two, .three, .four, .five, .six{
+        grid-area: auto;
+    }
+
+    .two{
+        background-color: rgb(175, 235, 175);
+    }
+
+    .four{
+        background-color: rgb(245, 245, 139);
+    }
+}
+
+
+
