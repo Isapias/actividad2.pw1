@@ -7,7 +7,7 @@ body{
 }
 
 .contenedor{
-    height: 45rem;
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(4,25%);
     grid-template-rows: 70% 30%;
